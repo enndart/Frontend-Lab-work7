@@ -1,38 +1,85 @@
 .App {
-  text-align: center;
+  margin: 20px 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.clickable {
+  cursor: pointer;
+  display: block;
+  padding: 2px 0;
+  margin: 1em 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.controls-wrapper {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #767676;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #e5e5e5;
+}
+
+.image-container img {
+  display: block;
+}
+
+.separator {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px solid #cccccc;
+}
+
+/* Завдання 2 */
+.goods-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 850px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.goods-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.goods-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.goods-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.goods-title {
+  margin: 5px 0;
+  color: #29b6f6;
+  font-size: 18px;
+}
+
+.goods-price {
+  margin: 5px 0 0;
+  font-size: 15px;
+  color: #222222;
 }
